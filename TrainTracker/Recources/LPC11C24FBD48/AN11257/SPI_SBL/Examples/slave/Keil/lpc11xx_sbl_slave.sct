@@ -1,0 +1,24 @@
+LR_IROM1 0x00000000 0x00000FF0  {    ; load region size_region
+  ER_IROM1 0x00000000 0x00000FF0  {  ; load address = execution address
+   *.o (RESET, +First)
+   *(InRoot$$Sections)
+   .ANY (+RO) 
+  }
+  RW_IRAM1 0x10000000 0x00001C00  {  ; RW data
+   .ANY (+RW +ZI)
+  }
+}
+
+LR_SBL_CODE 0x00000FF0 0x00000010{ ; SBL-API
+	ER_SBL 0x00000FF0  0x00000010 { ;
+      sbl_slave.o("sbl_call", +First)
+	}
+}
+
+
+
+
+
+
+
+

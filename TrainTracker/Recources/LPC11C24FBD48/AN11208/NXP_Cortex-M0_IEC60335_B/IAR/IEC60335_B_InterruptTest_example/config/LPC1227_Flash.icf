@@ -1,0 +1,80 @@
+define symbol intvec_start = 0x00000000;
+define memory mem with size = 4G;
+initialize by copy { readwrite };
+do not initialize  { section .noinit };
+
+/*
+keep { object IEC60335_B_UserData.o };
+keep { object LPC1227_TargetConfig.o };
+*/
+
+/***********************************************/
+/* FLASH (ROM) memory */
+/***********************************************/
+define symbol ROM_start  = 0x100; /* end of the vector table  */
+define symbol ROM_end  = 0x20000; /* 128K */
+define symbol CRP_LOCATION = 0x2FC;
+
+/* define the user part of the rom */
+define region ROM_region = mem:[from ROM_start  to CRP_LOCATION - 1] | 
+		               [from CRP_LOCATION + 4 to ROM_end ] ;
+
+/* rom placements */
+place at address mem:intvec_start { readonly section .intvec };
+place at address mem:CRP_LOCATION { readonly section .crp };
+
+/* CRC definition */
+define symbol CRC_ALIGNMENT = 16; /* used for the MISR signature which is 128 bit */
+define block CRC_SIGNATURE with alignment = CRC_ALIGNMENT { section flashSignatureSection };
+define block ROM_IMAGE_LIMIT with size = 1, alignment = CRC_ALIGNMENT  {};
+keep { block ROM_IMAGE_LIMIT };
+define block ALL_READONLY { readonly 
+section .iar*,
+section .rodata,
+section .text,
+section .data_init
+} 
+except 
+{ section flashSignatureSection };
+
+define block CODE_CONSTS_RO with fixed order { block ALL_READONLY, block ROM_IMAGE_LIMIT, block CRC_SIGNATURE };
+
+place in ROM_region { block CODE_CONSTS_RO };
+
+/***********************************************/
+/* RAM memory */
+/***********************************************/
+define symbol LPC_1227_RAM_start   = 0x10000000;
+define symbol LPC_1227_RAM_end     = 0x10001FFF;
+
+define symbol IAP_RESERVED = 0x20; /* top 32 bytes reserved for IAP commands */
+
+define symbol USER_RAM_START = LPC_1227_RAM_start;
+define symbol USER_RAM_END = LPC_1227_RAM_end - IAP_RESERVED;
+
+/***********************************************/
+/* Sizes of stack, heap, ClassB reserved RAM memory */
+/***********************************************/
+define symbol size_cstack = 0x800;      /* 2K of stack */
+/*define symbol size_heap = 0x200;      no heap at the moment */  
+
+define block CSTACK with alignment = 8, size = size_cstack { };
+define block CLASSB_DATA with alignment = 8 { section readwrite object IEC60335_B_UserData.o };
+define block ALL_RW with fixed order { block CLASSB_DATA, readwrite, block CSTACK };
+
+/* define the user part of the ram */
+/* modified to take care of IAP requirements */
+define region RAM_region = mem:[from USER_RAM_START to USER_RAM_END];
+
+/* ram placements */
+/* to ensure specific order is preserved */
+place in RAM_region { block ALL_RW };
+
+/* IEC60335 related, used to determine memory layout  */
+define exported symbol IEC60335_TOP_RAM_POST = LPC_1227_RAM_end+1;
+define exported symbol IEC60335_BOTTOM_RAM_POST = LPC_1227_RAM_start;
+
+define exported symbol IEC60335_TOP_RAM_BIST = LPC_1227_RAM_end+1;
+
+define exported symbol IEC60335_BOTTOM_ROM_POST = intvec_start;
+

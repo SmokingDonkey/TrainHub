@@ -1,0 +1,9 @@
+--create .\libs\crypt_lib_CM0.lib
+.\libs\crypt.o
+.\libs\cypher.o
+.\libs\decrypt.o
+.\libs\init_crypt.o
+.\libs\init_decrypt.o
+.\libs\gen_aes128_expkey.o
+.\libs\gen_aes192_expkey.o
+.\libs\gen_aes256_expkey.o

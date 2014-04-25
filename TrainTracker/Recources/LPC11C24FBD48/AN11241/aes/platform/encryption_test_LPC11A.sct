@@ -1,0 +1,26 @@
+; *************************************************************
+; *** Scatter-Loading Description File for LPC11A14         ***
+; *************************************************************
+
+LR_INTERNAL_FLASH 0x00000000 0x00008000  {    
+  
+  ER_IROM_AESBOOT 0x00000000 0x00008000  {  
+   
+   *.o (RESET, +First)
+   
+   *(InRoot$$Sections)
+   
+   .ANY (+RO)
+   
+  }
+  
+
+  
+  ; RW data 
+  ER_INTERNAL_RAM 0x10000000 0x00002000  {  
+  
+   .ANY (+RW +ZI)
+   
+  }
+}
+

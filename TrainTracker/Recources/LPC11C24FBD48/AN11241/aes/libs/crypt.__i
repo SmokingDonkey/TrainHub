@@ -1,0 +1,1 @@
+-c --cpu Cortex-M0 --li -O3 --apcs=interwork --split_sections -I.\inc -I C:\dev\Keil_4_50\ARM\RV31\Inc -I C:\dev\Keil_4_50\ARM\CMSIS\Include -I C:\dev\Keil_4_50\ARM\Inc\NXP\LPC11Axx -o ".\libs\crypt.o" --depend ".\libs\crypt.d" "src\crypt.c"

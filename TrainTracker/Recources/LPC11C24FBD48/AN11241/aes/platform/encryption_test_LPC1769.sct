@@ -1,0 +1,27 @@
+; *************************************************************
+; *** Scatter-Loading Description File for LPC1769          ***
+; *************************************************************
+
+; 512 K Flash
+LR_INTERNAL_FLASH 0x0 0x80000  {    
+  
+  ER_IROM_AESBOOT 0x0 0x80000  {  
+   
+   *.o (RESET, +First)
+   
+   *(InRoot$$Sections)
+   
+   .ANY (+RO)
+   
+  }
+  
+  ; RW data 32K SRAM
+  ER_INTERNAL_RAM 0x10000000 0x8000  {  
+  
+   .ANY (+RW +ZI)
+   
+  }
+}
+
+
+

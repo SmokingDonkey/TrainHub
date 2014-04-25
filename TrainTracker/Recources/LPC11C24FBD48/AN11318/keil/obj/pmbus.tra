@@ -1,0 +1,25 @@
+*** Creating Trace Output File '.\obj\pmbus.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\startup_lpc13xx.o"'
+### List of Objects: adding '".\obj\system_lpc13xx.o"'
+### List of Objects: adding '".\obj\gpio.o"'
+### List of Objects: adding '".\obj\timer32.o"'
+### List of Objects: adding '".\obj\i2c.o"'
+### List of Objects: adding '".\obj\app_pmbus.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\startup_lpc13xx.o" ".\obj\system_lpc13xx.o" ".\obj\gpio.o" ".\obj\timer32.o" ".\obj\i2c.o" ".\obj\app_pmbus.o" 
+--strict --scatter ".\obj\pmbus.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\lst\pmbus.map" -o .\obj\pmbus.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\obj\pmbus.axf'
+### ADS-LD Command File: '.\obj\pmbus.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\obj\pmbus.lnp', Handle=0x000005D4
+### Writing '.lnp' file
+### ADS-LD Command file '.\obj\pmbus.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,22 @@
+*** Creating Trace Output File '.\FLASH\encryption_test_dbg_LPC11A.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\flash\system_lpc11axx.o"'
+### List of Objects: adding '".\flash\startup_lpc11axx.o"'
+### List of Objects: adding '".\flash\main.o"'
+### List of Objects: adding '".\crypt_lib\libs\crypt_lib_CM0_test_mode.lib"'
+### ADS-LD Command completed:
+--cpu Cortex-M0 ".\flash\system_lpc11axx.o" ".\flash\startup_lpc11axx.o" ".\flash\main.o" C:\Users\nxp28536\work\documents\app_notes\aes\crypt_lib\libs\crypt_lib_CM0_test_mode.lib --library_type=microlib --strict --scatter ".\FLASH\encryption_test_dbg_LPC11A.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\LIST\encryption_test_dbg_LPC11A.map" -o ".\FLASH\encryption_test_dbg_LPC11A.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\FLASH\encryption_test_dbg_LPC11A.axf'
+### ADS-LD Command File: '.\FLASH\encryption_test_dbg_LPC11A.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\FLASH\encryption_test_dbg_LPC11A.lnp', Handle=0x00000370
+### Writing '.lnp' file
+### ADS-LD Command file '.\FLASH\encryption_test_dbg_LPC11A.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,50 @@
+Dependencies for Project 'pmbus', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_LPC13xx.s)(0x4F5908B6)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx --list ".\lst\startup_LPC13xx.lst" --xref -o ".\obj\startup_LPC13xx.o" --depend ".\obj\startup_LPC13xx.d")
+F (.\Common\src\system_LPC13xx.c)(0x4FF70FB4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I. -I.\Common\inc -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx -o ".\obj\system_lpc13xx.o" --omf_browse ".\obj\system_lpc13xx.crf" --depend ".\obj\system_lpc13xx.d")
+I (C:\Keil460\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB19764)
+I (.\Common\inc\LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\core_cm3.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmInstr.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmFunc.h)(0x4FF70FB4)
+I (.\Common\inc\system_LPC13xx.h)(0x4FF70FB4)
+F (.\Common\src\gpio.c)(0x50E76D67)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I. -I.\Common\inc -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx -o ".\obj\gpio.o" --omf_browse ".\obj\gpio.crf" --depend ".\obj\gpio.d")
+I (.\Common\inc\LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\core_cm3.h)(0x4FF70FB4)
+I (C:\Keil460\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB19764)
+I (.\Common\inc\core_cmInstr.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmFunc.h)(0x4FF70FB4)
+I (.\Common\inc\system_LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\gpio.h)(0x4FF70FB4)
+I (.\app_pmbus.h)(0x50E5E6B7)
+F (.\Common\src\timer32.c)(0x50E5EA8A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I. -I.\Common\inc -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx -o ".\obj\timer32.o" --omf_browse ".\obj\timer32.crf" --depend ".\obj\timer32.d")
+I (.\Common\inc\LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\core_cm3.h)(0x4FF70FB4)
+I (C:\Keil460\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB19764)
+I (.\Common\inc\core_cmInstr.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmFunc.h)(0x4FF70FB4)
+I (.\Common\inc\system_LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\timer32.h)(0x50E5EB1F)
+F (.\Common\src\i2c.c)(0x50E5E74F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I. -I.\Common\inc -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx -o ".\obj\i2c.o" --omf_browse ".\obj\i2c.crf" --depend ".\obj\i2c.d")
+I (.\Common\inc\LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\core_cm3.h)(0x4FF70FB4)
+I (C:\Keil460\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB19764)
+I (.\Common\inc\core_cmInstr.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmFunc.h)(0x4FF70FB4)
+I (.\Common\inc\system_LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\type.h)(0x4FF70FB4)
+I (.\Common\inc\i2c.h)(0x50E5E675)
+I (.\app_pmbus.h)(0x50E5E6B7)
+I (.\Common\inc\gpio.h)(0x4FF70FB4)
+F (.\app_pmbus.c)(0x50E7737F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I. -I.\Common\inc -I C:\Keil460\ARM\RV31\INC -I C:\Keil460\ARM\CMSIS\Include -I C:\Keil460\ARM\Inc\NXP\LPC13xx -o ".\obj\app_pmbus.o" --omf_browse ".\obj\app_pmbus.crf" --depend ".\obj\app_pmbus.d")
+I (.\Common\inc\LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\core_cm3.h)(0x4FF70FB4)
+I (C:\Keil460\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB19764)
+I (.\Common\inc\core_cmInstr.h)(0x4FF70FB4)
+I (.\Common\inc\core_cmFunc.h)(0x4FF70FB4)
+I (.\Common\inc\system_LPC13xx.h)(0x4FF70FB4)
+I (.\Common\inc\type.h)(0x4FF70FB4)
+I (.\Common\inc\timer32.h)(0x50E5EB1F)
+I (.\Common\inc\i2c.h)(0x50E5E675)
+I (.\Common\inc\gpio.h)(0x4FF70FB4)
+I (C:\Keil460\ARM\ARMCC\bin\..\include\math.h)(0x4EB19768)
+I (app_pmbus.h)(0x50E5E6B7)

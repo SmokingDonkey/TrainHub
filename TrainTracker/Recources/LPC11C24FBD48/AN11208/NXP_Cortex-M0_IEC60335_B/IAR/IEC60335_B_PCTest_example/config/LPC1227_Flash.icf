@@ -1,0 +1,92 @@
+define symbol intvec_start = 0x00000000;
+define memory mem with size = 4G;
+
+initialize by copy { readwrite };                    
+initialize by copy { section .IEC60335_B_beforeRAMcode, 
+                     section .IEC60335_B_behindRAMcode };
+
+do not initialize  { section .noinit };
+
+/* Getting the PC Test sections ready for copying to RAM */
+define block BeforeRAMCode {section .IEC60335_B_beforeRAMcode};
+define block BeforeRAMCodeInit {section .IEC60335_B_beforeRAMcode_init};
+define block BehindRAMCode {section .IEC60335_B_behindRAMcode};
+define block BehindRAMCodeInit {section .IEC60335_B_behindRAMcode_init};
+
+/***********************************************/
+/* FLASH (ROM) memory */
+/***********************************************/
+define symbol ROM_start             = 0x00000124;
+define symbol CLASSB_END_size       = 0x20;
+define symbol ROM_end               = 0x00007FFF - CLASSB_END_size; /* 32 K of flash - CLASSB end section */
+define symbol CLASSB_end            = ROM_end + CLASSB_END_size;
+define symbol CRP_LOCATION          = 0x2FC;
+define symbol CLASSB_BEHINDVECTORS  = ROM_start + 4;
+
+
+/* define the user part of the rom */
+define region ROM_region = mem:[from ROM_start to CLASSB_BEHINDVECTORS] | 
+                               [from CLASSB_BEHINDVECTORS  to CRP_LOCATION - 1] |
+		               [from CRP_LOCATION + 4 to ROM_end ];
+define region ROM_CLASSB_END_region = mem:[from ROM_end to CLASSB_end];
+
+/* rom placements */
+place at address mem:intvec_start                   { readonly section .intvec };
+place at address mem:CRP_LOCATION                   { readonly section .crp };
+place at address mem:CLASSB_BEHINDVECTORS           { readonly section .IEC60335_B_behindVectors };
+define block CLASSB_BEFORETEXT with alignment = 8   { readonly section .IEC60335_B_beforeText };
+define block CLASSB_BEHINDTEXT with alignment = 8   { readonly section .IEC60335_B_behindText };
+define block ALL_RO with fixed order                {block CLASSB_BEFORETEXT, readonly, block CLASSB_BEHINDTEXT };
+place in ROM_region                                 {block ALL_RO, block BeforeRAMCodeInit, block BehindRAMCodeInit };
+
+define block CLASSB_LASTSECTOR with alignment = 8   { section .IEC60335_B_lastFashSection };
+define block CLASSB_FLASHSIGNSECTOR with alignment = 8   { section flashSignatureSection };
+define block CLASSB_END_block with fixed order      {block CLASSB_LASTSECTOR, block CLASSB_FLASHSIGNSECTOR };
+place in ROM_CLASSB_END_region                      {block CLASSB_END_block};
+
+/***********************************************/
+/* RAM memory */
+/***********************************************/
+define symbol LPC_1227_RAM_start   = 0x10000000;
+define symbol LPC_1227_RAM_end     = 0x10001FFF;
+
+define symbol IAP_RESERVED = 0x20; /* top 32 bytes reserved for IAP commands */
+
+define symbol USER_RAM_START = LPC_1227_RAM_start;
+define symbol USER_RAM_END = LPC_1227_RAM_end - IAP_RESERVED;
+
+/***********************************************/
+/* Sizes of stack, heap, ClassB reserved RAM memory */
+/***********************************************/
+define symbol size_cstack = 0x800;      /* 2K of stack */
+/*define symbol size_heap = 0x200;      no heap at the moment */  
+
+keep { object IEC60335_B_UserData.o };
+keep { object LPC1227_TargetConfig.o };
+
+/* define the user part of the ram */
+/* modified to take care of IAP requirements */
+define region RAM_region = mem:[from USER_RAM_START to USER_RAM_END];
+
+define block CSTACK with alignment = 8, size = size_cstack { };
+/* define block HEAP with alignment = 8, size = size_heap { }; */
+define block CLASSB_DATA with alignment = 8                     {object IEC60335_B_UserData.o };
+
+/* Combine all blocks in the right order */
+define block ALL_RW with fixed order   {
+                                        block BeforeRAMCode,
+                                        block CLASSB_DATA, 
+                                        readwrite, 
+                                        block BehindRAMCode,
+                                        block CSTACK
+                                       }; 
+
+/* ram placements */
+/* to ensure specific order is preserved */
+place in RAM_region   { block ALL_RW  };
+
+/* IEC60335 related, used to determine memory layout  */
+define exported symbol IEC60335_TOP_RAM_POST = LPC_1227_RAM_end+1;
+define exported symbol IEC60335_BOTTOM_RAM_POST = LPC_1227_RAM_start;
+
+define exported symbol IEC60335_TOP_RAM_BIST = LPC_1227_RAM_end+1;

@@ -1,0 +1,14 @@
+###############################################################################
+# AES encryption and decryption library										  #
+###############################################################################
+
+This software library provides an implementation of an AES encryption algorithm
+according to the FIPS197 standard, available at http://csrc.nist.gov/csor
+
+For mode information on its usage, refer to the document 
+	
+	AES encryption and decryption on NXP microcontrollers.pdf
+
+To run the example, open aes_encryption.uvmp, rebuild for the appropriate 
+taget and download on flash to run it.
+
