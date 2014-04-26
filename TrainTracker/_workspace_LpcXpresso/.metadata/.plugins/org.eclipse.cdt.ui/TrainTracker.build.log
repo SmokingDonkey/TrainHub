@@ -1,0 +1,23 @@
+10:46:59 **** Build of configuration Debug for project TrainTracker ****
+make all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC11XX__ -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/TrainTracker/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC11XX__ -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/TrainTracker/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC11XX__ -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/TrainTracker/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:15:19: fatal error: board.h: No such file or directory
+ #include "board.h"
+                   ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+
+10:46:59 Build Finished (took 532ms)
+

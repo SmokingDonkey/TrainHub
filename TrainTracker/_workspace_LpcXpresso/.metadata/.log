@@ -310,3 +310,73 @@ Binding(ALT+CTRL+H,
 
 !ENTRY org.eclipse.ui 4 4 2014-04-25 21:53:20.474
 !MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@14d2465} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:47:22.231
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@14d2465} vs {com.crt.dsfdebug.commands.RestartCommand}
+!SESSION 2014-04-26 10:51:29.796 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=de_DE
+Framework arguments:  -keyring /Users/keller_reto/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/keller_reto/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:51:47.927
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.core.net 1 0 2014-04-26 10:51:48.667
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:51:53.897
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:51:53.897
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:51:57.824
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:51:58.395
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:52:04.909
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:52:06.519
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:52:11.003
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:53:42.766
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:53:44.431
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:53:45.234
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:53:46.919
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:54:42.632
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:54:56.228
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:56:06.874
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:56:20.489
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:56:24.335
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:56:27.811
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
+
+!ENTRY org.eclipse.ui 4 4 2014-04-26 10:56:30.837
+!MESSAGE Conflicting handlers for com.crt.dsfdebug.RestartCommand: {com.crt.dsfdebug.commands.RestartCommand@12a4caf} vs {com.crt.dsfdebug.commands.RestartCommand}
