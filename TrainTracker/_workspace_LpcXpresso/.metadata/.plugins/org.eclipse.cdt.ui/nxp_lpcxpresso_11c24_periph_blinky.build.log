@@ -1,0 +1,6 @@
+22:29:54 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11c24_periph_blinky ****
+make all 
+make: Nothing to be done for `all'.
+
+22:29:54 Build Finished (took 53ms)
+

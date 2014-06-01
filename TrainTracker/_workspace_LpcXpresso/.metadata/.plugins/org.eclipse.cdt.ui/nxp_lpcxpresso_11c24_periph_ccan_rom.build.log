@@ -1,0 +1,6 @@
+22:55:43 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11c24_periph_ccan_rom ****
+make all 
+make: Nothing to be done for `all'.
+
+22:55:43 Build Finished (took 64ms)
+

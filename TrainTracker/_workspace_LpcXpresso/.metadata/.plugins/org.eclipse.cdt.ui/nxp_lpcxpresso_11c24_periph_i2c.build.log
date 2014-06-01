@@ -1,0 +1,58 @@
+22:21:53 **** Build of configuration Debug for project nxp_lpcxpresso_11c24_periph_i2c ****
+make all 
+Building file: ../example/src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_i2c/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc11xx.d" -MT"example/src/cr_startup_lpc11xx.d" -o "example/src/cr_startup_lpc11xx.o" "../example/src/cr_startup_lpc11xx.c"
+Finished building: ../example/src/cr_startup_lpc11xx.c
+ 
+Building file: ../example/src/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_i2c/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/i2c.d" -MT"example/src/i2c.d" -o "example/src/i2c.o" "../example/src/i2c.c"
+In file included from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/chip.h:232:0,
+                 from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc/board.h:35,
+                 from ../example/src/i2c.c:34:
+/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/pmu_11xx.h:49:8: warning: missing terminating " character [enabled by default]
+ #error "LPC1125 support for the PMU driver is not ready
+        ^
+../example/src/i2c.c: In function 'i2c_eeprom_events':
+../example/src/i2c.c:303:2: warning: enumeration value 'I2C_EVENT_WAIT' not handled in switch [-Wswitch]
+  switch (event) {
+  ^
+../example/src/i2c.c:303:2: warning: enumeration value 'I2C_EVENT_LOCK' not handled in switch [-Wswitch]
+../example/src/i2c.c:303:2: warning: enumeration value 'I2C_EVENT_UNLOCK' not handled in switch [-Wswitch]
+../example/src/i2c.c: In function 'i2c_iox_events':
+../example/src/i2c.c:384:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+    iox_xfer.txBuff = (const uint8_t *) iox_data[0];
+                      ^
+../example/src/i2c.c:368:2: warning: enumeration value 'I2C_EVENT_WAIT' not handled in switch [-Wswitch]
+  switch (event) {
+  ^
+../example/src/i2c.c:368:2: warning: enumeration value 'I2C_EVENT_LOCK' not handled in switch [-Wswitch]
+../example/src/i2c.c:368:2: warning: enumeration value 'I2C_EVENT_UNLOCK' not handled in switch [-Wswitch]
+Finished building: ../example/src/i2c.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_i2c/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+In file included from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/chip.h:232:0,
+                 from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc/board.h:35,
+                 from ../example/src/sysinit.c:32:
+/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/pmu_11xx.h:49:8: warning: missing terminating " character [enabled by default]
+ #error "LPC1125 support for the PMU driver is not ready
+        ^
+Finished building: ../example/src/sysinit.c
+ 
+Building target: nxp_lpcxpresso_11c24_periph_i2c.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/Debug" -L"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/Debug" -Xlinker -Map="nxp_lpcxpresso_11c24_periph_i2c.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11c24_periph_i2c_Debug.ld" -o "nxp_lpcxpresso_11c24_periph_i2c.axf"  ./example/src/cr_startup_lpc11xx.o ./example/src/i2c.o ./example/src/sysinit.o   -lnxp_lpcxpresso_11c24_board_lib -llpc_chip_11cxx_lib
+Finished building target: nxp_lpcxpresso_11c24_periph_i2c.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "nxp_lpcxpresso_11c24_periph_i2c.axf"; # arm-none-eabi-objcopy -O binary "nxp_lpcxpresso_11c24_periph_i2c.axf" "nxp_lpcxpresso_11c24_periph_i2c.bin" ; checksum -p LPC11C24_301 -d "nxp_lpcxpresso_11c24_periph_i2c.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6424	     40	   1048	   7512	   1d58	nxp_lpcxpresso_11c24_periph_i2c.axf
+ 
+
+22:21:54 Build Finished (took 621ms)
+

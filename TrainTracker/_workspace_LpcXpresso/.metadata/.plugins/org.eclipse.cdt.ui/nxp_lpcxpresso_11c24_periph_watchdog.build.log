@@ -1,0 +1,43 @@
+22:22:00 **** Build of configuration Debug for project nxp_lpcxpresso_11c24_periph_watchdog ****
+make all 
+Building file: ../example/src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_watchdog/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc11xx.d" -MT"example/src/cr_startup_lpc11xx.d" -o "example/src/cr_startup_lpc11xx.o" "../example/src/cr_startup_lpc11xx.c"
+Finished building: ../example/src/cr_startup_lpc11xx.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_watchdog/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+In file included from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/chip.h:232:0,
+                 from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc/board.h:35,
+                 from ../example/src/sysinit.c:32:
+/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/pmu_11xx.h:49:8: warning: missing terminating " character [enabled by default]
+ #error "LPC1125 support for the PMU driver is not ready
+        ^
+Finished building: ../example/src/sysinit.c
+ 
+Building file: ../example/src/watchdog.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0 -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_periph_watchdog/example/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc" -I"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/watchdog.d" -MT"example/src/watchdog.d" -o "example/src/watchdog.o" "../example/src/watchdog.c"
+In file included from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/chip.h:232:0,
+                 from /Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/inc/board.h:35,
+                 from ../example/src/watchdog.c:32:
+/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/inc/pmu_11xx.h:49:8: warning: missing terminating " character [enabled by default]
+ #error "LPC1125 support for the PMU driver is not ready
+        ^
+Finished building: ../example/src/watchdog.c
+ 
+Building target: nxp_lpcxpresso_11c24_periph_watchdog.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/nxp_lpcxpresso_11c24_board_lib/Debug" -L"/Users/keller_reto/_work/TrainHub/TrainTracker/_workspace_LpcXpresso/lpc_chip_11cxx_lib/Debug" -Xlinker -Map="nxp_lpcxpresso_11c24_periph_watchdog.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "nxp_lpcxpresso_11c24_periph_watchdog_Debug.ld" -o "nxp_lpcxpresso_11c24_periph_watchdog.axf"  ./example/src/cr_startup_lpc11xx.o ./example/src/sysinit.o ./example/src/watchdog.o   -lnxp_lpcxpresso_11c24_board_lib -llpc_chip_11cxx_lib
+Finished building target: nxp_lpcxpresso_11c24_periph_watchdog.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "nxp_lpcxpresso_11c24_periph_watchdog.axf"; # arm-none-eabi-objcopy -O binary "nxp_lpcxpresso_11c24_periph_watchdog.axf" "nxp_lpcxpresso_11c24_periph_watchdog.bin" ; checksum -p LPC11C24_301 -d "nxp_lpcxpresso_11c24_periph_watchdog.bin";
+   text	   data	    bss	    dec	    hex	filename
+   3260	      0	    340	   3600	    e10	nxp_lpcxpresso_11c24_periph_watchdog.axf
+ 
+
+22:22:01 Build Finished (took 579ms)
+
